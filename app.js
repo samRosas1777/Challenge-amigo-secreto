@@ -23,3 +23,4 @@ function actulizarLista(){
         ListaAmigos.appendChild(li);
     });
 }
+
