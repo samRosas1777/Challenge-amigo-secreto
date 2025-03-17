@@ -24,3 +24,14 @@ function actulizarLista(){
     });
 }
 
+function sortearAmigo(){
+    if (amigos.length === 0) {
+        alert("La lista esta vacia, por favor agregue nombres antes de sortear");
+        return;
+    }
+    
+    let sortear = Math.floor(Math.random() * amigos.length);
+    let amigoSecreto = amigos[sortear];
+    ListaAmigos.innerHTML = "";
+    document.getElementById("resultado").textContent = `🎉🎉 ${amigoSecreto}  es tu amigo Secreto 🎉🎉`;
+}
