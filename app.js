@@ -7,15 +7,19 @@ function agregarAmigo(){
     let nombre = input.value.trim();
     if (nombre) {
      amigos.push(nombre);
-     ListaAmigos.innerHTML = "";
-     amigos.forEach(nombre => {
-        let li = document.createElement("li");
-        li.textContent = nombre;
-        ListaAmigos.appendChild(li);
-     });
+     actulizarLista();
      input.value = "";
      input.focus();   
     }else{
         alert("Por favor inserte un nombre válido");
     }
+}
+
+function actulizarLista(){
+    ListaAmigos.innerHTML = "";
+    amigos.forEach(nombre => {
+        let li = document.createElement("li");
+        li.textContent = nombre;
+        ListaAmigos.appendChild(li);
+    });
 }
